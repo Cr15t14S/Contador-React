@@ -6,11 +6,17 @@ const Contador = () => {
   const handleClick = () => {
     setContador(contador + 1);
   };
+  const handleDisminuir = () => {
+    setContador(contador - 1);
+  };
   return (
     <div className={styles.cardContador}>
-      <div className={styles.value}>{contador}</div>
       <button className={styles.button} onClick={handleClick}>
         Aumentar
+      </button>
+      <div className={styles.value}>{contador}</div>
+      <button className={styles.button} onClick={handleDisminuir}>
+        Disminuir
       </button>
     </div>
   );
