@@ -1,0 +1,89 @@
+.formulario {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: var(--color-fondo-form, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body[data-tema="oscuro"] .formulario {
+  background: #1e1e1e;
+  color: #f3f3f3;
+}
+
+.formulario label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario .error {
+  color: #ff4d4d;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.formulario button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.formulario button:hover {
+  background-color: #357ab7;
+  transform: translateY(-1px);
+}
+
+.formulario button:active {
+  transform: translateY(1px);
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formulario {
+  animation: fadeInForm 0.4s ease;
+}
