@@ -1,10 +1,18 @@
-import "./App.css";
-import Contador from "./Talleres/Contador/Contador";
+import "./styles/global.css";
+import Contador from "./components/Contador/Contador";
+import { TemaProvider } from "./components/Contexto/TemaProvider";
+import { Pagina } from "./components/pagina/Pagina";
 
 function App() {
   return (
     <>
-      <Contador></Contador>
+      
+      <TemaProvider>
+        <div className="app-container">
+        <Contador />
+        <Pagina />
+        </div>
+      </TemaProvider>
     </>
   );
 }
